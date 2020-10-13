@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+
+</head>
+<body>
+<table>
+    <tr>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+    </tr>
+    <tr>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+    </tr>
+    <tr>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+    </tr>
+    <tr>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+    </tr>
+    <tr>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+        <td><img alt="" src="images/00.jpg" onclick="dian(this)">
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    //获得所有的图片
+    var images = document.images;
+    var time = 1000;
+
+    function huan() {
+        //alert(images.length);
+        //老鼠出动
+        var index = parseInt(Math.random() * 25);
+        /* alert(index); */
+        images[index].src = "images/01.jpg"
+        setTimeout("pao(" + index + ")", 1000);
+        setTimeout(huan, 1000);
+    }
+
+    function pao(index) {
+        /* 	alert(index); */
+        images[index].src = "images/03.jpg"
+        setTimeout("xiao(" + index + ")", 300);
+    }
+
+    function xiao(index) {
+        images[index].src = "images/00.jpg"
+    }
+
+    huan();
+
+    function dian(obj) {
+        var a = obj.src
+        //alert(a)
+        if (obj.src == "http://localhost:63342/schoolwork/school/images/01.jpg") {
+            obj.src = "images/02.jpg"
+        }
+
+        xx = obj
+        setTimeout("xiaoshi(xx)", 300);
+    }
+
+    function xiaoshi(obj) {
+        obj.src = "images/00.jpg";
+    }
+</script>
+</body>
+</html>
