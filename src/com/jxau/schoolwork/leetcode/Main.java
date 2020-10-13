@@ -91,10 +91,11 @@ public class Main {
 
         return count;
     }
-    /******************************结束写代码******************************/
+    /****************************结束写代码****************************/
 
 
     public static void main(String[] args){
+
         /*Scanner in = new Scanner(System.in);
         int res;
 
